@@ -1,0 +1,15 @@
+.import test/io
+
+\ TODO: Add import\
+\ TODO: Add functions\
+
+
+
+
+func_ main() 
+{   
+    int_ message = "Hello World";
+
+    prints(message);
+
+}

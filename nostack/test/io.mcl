@@ -1,0 +1,26 @@
+func_ prints(string)
+{
+    string ?= 0;
+    while(string)
+    {
+        putc(string);
+        string ?+ 1;
+    }
+    string ?= 0;
+}
+
+func_ scans(string)
+{
+    string ?= 0;
+
+    int_ char;
+
+    while(char != 10)
+    {
+        getc(char);
+        string = char;
+        string ?+ 1;
+    }
+
+    string ?= 0;
+}
