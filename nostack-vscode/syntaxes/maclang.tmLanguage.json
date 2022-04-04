@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "nostack",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#chars"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.nostack",
+					"match": "\\b(if|else|elif|while|func_|int_|float_|import)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.nostack",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nostack",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "\\\\",
+					"captures": {
+						"0": {
+							"name": "comment.block.nostack"
+						}
+					},
+					"end": "\\\\",
+					"name": "comment.block.nostack"
+				}
+			]
+		},
+		"chars": {
+			"name": "string.quoted.single.nostack",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nostack",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "main.mcl"
+}
